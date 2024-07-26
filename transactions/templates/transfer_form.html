@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="flex justify-center items-center min-h-screen ">
+  <div class="w-full max-w-md rounded-lg shadow-md p-6 bg-green-200">
+    <h1 class="text-center text-black py-4 font-bold text-xl">Transfer Money</h1>
+    <form method="post" class="space-y-4 m-10 ">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="flex justify-center">
+        <button type="submit" class="bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 font-bold px-4 py-2 rounded-lg transition duration-150 ease-in-out shadow-md">Transfer</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

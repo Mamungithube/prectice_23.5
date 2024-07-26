@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Dummy Banking System" />
+    <title>
+        {% block head_title %}Banking System{% endblock %}
+    </title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            height: 350px;
+            margin-top: 80px;
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-indigo-600">
+    
+    {% include 'navbar.html' %}
+    {% block body %}
+
+    {% endblock %}
+    <u><i><h1 style="color: rgb(185, 205, 158);">Welcome To Mamar bank</h1></i></u>
+    <div class="content">
+        <img class="center-content" src="{% static 'mamar bank.jpg' %}" alt="mamar bank">
+        <img class="center-content" src="{% static 'bank.jpg' %}" alt="bank">
+    </div>
+
+    <footer class="footer bg-blue-900 text-white relative border-b-2 mt-10">
+        <div class="container mx-auto px-6">
+            <div class="mt-5 flex flex-col items-center">
+                <div class="sm:w-2/3 text-center py-0 pb-2">
+                    <p class="text-md text-white font-bold mb-2">
+                        © Copyright {% now "Y" %} Mamun , Cumilla
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+</html>
